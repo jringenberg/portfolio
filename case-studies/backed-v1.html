@@ -14,7 +14,7 @@
 <body>
     <div class="page">
         <div class="back-link-container">
-            <a href="../cv/index.html" class="back-link">← Back to CV</a>
+            <a href="/cv" class="back-link">← Back to CV</a>
         </div>
         
         <div class="case-study">
@@ -24,26 +24,26 @@
             <h3>Context: NFT Loans</h3>
             <p>A prospective Borrower sets the loan terms they'll accept and deposits their NFT, which is then visible to potential Lenders. If Lenders like the terms, they finance the loan and have the opportunity to seize the collateral if the loan and its interest isn't paid upon maturity. Lenders are also able to 'buy out' active loans by proposing better terms (such as a lower interest rate). In this event, the initial Lender is repaid and awarded any accrued interest, and the loan begins again at the new terms with the new Lender as counter-party.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-1.png" alt="NFT loan interface">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-1.png" alt="NFT loan interface">
 
             <p>The details of loan offers (both for new loans and active loans) is presented as cards on the homepage. These details show the key terms of an NFT-backed loan: the collateral NFT, the amount borrowed, the interest rate, and the duration.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-2.png" alt="Loan offer cards">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-2.png" alt="Loan offer cards">
 
             <h3>Creating a Loan</h3>
             <p>The biggest design challenge of this project was simplifying the loan-creation flow that a potential Borrower encounters. This flow involves different actions, critical decisions, and multiple onchain transactions. To mitigate that complexity, the design presents the work as a single, simple task flow. The goal is to build a sense of clarity and trust for the Borrower, to increase the number who are able to complete the task and deposit their NFT into the protocol.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-3.png" alt="Loan creation flow">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-3.png" alt="Loan creation flow">
 
             <p>The first step of the design process was breaking the workflow down into discrete steps. The most important constraint at this stage was to complete the loan creation process on one screen, so that users are able to begin with the end in sight and complete the task as a series of small, safe, and clear steps.</p>
 
             <p>Even before connecting their wallet, a user can see the entirety of the work ahead of them:</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-4.png" alt="Step 1 of loan creation">
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-5.png" alt="Step 2 of loan creation">
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-6.png" alt="Step 3 of loan creation">
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-7.png" alt="Step 4 of loan creation">
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-8.png" alt="Step 5 of loan creation">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-4.png" alt="Step 1 of loan creation">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-5.png" alt="Step 2 of loan creation">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-6.png" alt="Step 3 of loan creation">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-7.png" alt="Step 4 of loan creation">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-8.png" alt="Step 5 of loan creation">
 
             <p>A critical piece of feedback uncovered in testing early prototypes of the flow was that users needed clear descriptions of each step. Rather than rely on tooltips (which are rarely recognized and opened even when they're needed), I decided that if the form itself was presented in a single column, a persistent 'help bubble' could follow the user through the flow and explain each step.</p>
 
@@ -52,17 +52,17 @@
             <h3>Transaction Buttons</h3>
             <p>Another principle guiding the design is to treat on-chain transactions as flows in and of themselves, using the button element as progress indicator both across the whole form and within each on-chain step. This "button" is wearing many hats, but its ability to span that complexity is what allows the form as a whole to appear simple despite its technical complexity.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-9.png" alt="Transaction button states">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-9.png" alt="Transaction button states">
 
             <p>A subtle detail in these buttons is to leverage the tried-and-true HTML spec for clickable links (blue) and links-that-have-been-clicked (purple). While it's an aesthetic decision as much as anything, these colors offer a slight affordance to users. In contrast, the typical color-codings of green/red for go/stop or success/failure are so overloaded as to often make them <em>more</em> confusing for any semantic significance they carry.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-10.png" alt="Button color states">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-10.png" alt="Button color states">
 
             <p>To some degree, all clicks that trigger an on-chain transaction feel like <em>risky clicks</em>. In the case of creating a loan, it's critical to communicate exactly what will happen the the loan is created and the Borrower mints the ticket that acts as a receipt. This is the reason one of the final steps of the flow is a simple "Review" toggle that shows the user a summary of the transaction they're about to execute.</p>
 
             <p>Finally, when the Borrower creates the loan and "Mints Borrower Ticket," they receive an NFT that represents their position, as does a Lender when they choose to finance a loan.</p>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-11.png" alt="Borrower ticket NFT">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-11.png" alt="Borrower ticket NFT">
 
             <p>This NFT uses on-chain SVG art that I created as part of this project. The benefits of the art being entirely on-chain are many:</p>
 
@@ -73,7 +73,7 @@
                 <li>Finally (and purely aesthetically) the colors in the background gradient can be derived from the assets used in the loan (for example, all loans for WETH have the same light blue as one component of their gradient)</li>
             </ul>
 
-            <img src="../content/writing/KAgTnAyYAflraC0IOt53-12.png" alt="NFT art details">
+            <img src="/content/writing/KAgTnAyYAflraC0IOt53-12.png" alt="NFT art details">
 
             <h3>Project Retrospective</h3>
             <p>This project was the first lending protocol created by Backed, a team that consisted of myself (design) and three engineers. While the loan creation flow and other details of withbacked.xyz were effective and modestly successful (nearly $100k in loans facilitated) the team used the learnings from this version to launch a second, entirely new protocol at papr.xyz, which you can <a href="backed-v2.html">read about here</a>.</p>

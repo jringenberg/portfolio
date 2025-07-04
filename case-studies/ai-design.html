@@ -14,7 +14,7 @@
 <body>
     <div class="page">
         <div class="back-link-container">
-            <a href="../cv/index.html" class="back-link">← Back to CV</a>
+            <a href="/cv" class="back-link">← Back to CV</a>
         </div>
         
         <div class="case-study">
@@ -26,14 +26,14 @@
             <h3>Context</h3>
             <p>DuneAI is a tool for querying blockchain data. In the past, Dune users had to write complex queries to build charts and dashboards of onchain data. But now anyone can describe the data they want to see and DuneAI will write the query as SQL code, run it, evaluate the results, and return them. This process isn't always quick but it's incredibly powerful!</p>
 
-            <img src="../content/writing/ai-design-1.png" alt="DuneAI interface">
+            <img src="/content/writing/ai-design-1.png" alt="DuneAI interface">
 
             <p>DuneAI launched in the fall of 2023 and represents the work of an incredibly talented technical team on which I served as designer. These design notes cover some of the important details and the thinking behind them. They aren't prescriptive and will change as the team continues to build and explore this space, but I hope they serve as an invitation to discussion.</p>
 
             <h3>Detail: Call to action</h3>
             <p>We've all clicked the most classic button-text a thousand times: <em>Add to cart. Sign up. Log in. Search.</em> But the button copy that initiates an AI prompt is new territory. We lack the vocabulary to describe what these tools do — in some sense it is highly technical. In another sense it is pure magic.</p>
 
-            <img src="../content/writing/ai-design-2.gif" alt="DuneAI prompt input states">
+            <img src="/content/writing/ai-design-2.gif" alt="DuneAI prompt input states">
 
             <p>The primary input of DuneAI asks, "What do you want to know?" It gives the user a role to play and puts them on the spot. The technology powering the prompt is inscrutable, as would be a button with a technically-accurate CTA like "Execute prompt." Instead the button says "Find out," focusing on the value that the tool hopes to deliver.</p>
 
@@ -44,28 +44,28 @@
 
             <p>As users, we don't intuitively know what will work best or what's irrelevant. For example, asking politely doesn't make much of a difference to DuneAI. But accurately named blockchains, specific tables, exact addresses and project names have a huge impact on the output. The tool identifies these different tokens in the prompt and categorizes them as it searches for applicable data sets. So the examples highlight these important words with different colors for different token types.</p>
 
-            <img src="../content/writing/ai-design-3.png" alt="Token highlighting example">
+            <img src="/content/writing/ai-design-3.png" alt="Token highlighting example">
 
             <p>It's unlikely that users will deduce the system or categories represented. But the goal of this visual detail is to draw attention to technical specificity, model clarity, and help users write prompts that are a little bit better. The header on the page uses this highlighting as a visual conceit as well. Again, it's unlikely that it will operate on a literal level. But a prompt that's a little bit better can lead to a result that's a lot better!</p>
 
             <h3>Detail: Work in progress!</h3>
             <p>Some AI tools operate like chatbots, replying immediately. DuneAI operates more like Midjourney, working through an entire creation flow that can take a long time — sometimes seconds, sometimes minutes. By describing the work as it happens, the interface tries to build trust and patience. It's a reminder that behind the magic is some very heavy lifting.</p>
 
-            <img src="../content/writing/ai-design-4.gif" alt="Work in progress animation">
+            <img src="/content/writing/ai-design-4.gif" alt="Work in progress animation">
 
             <p>Animated, rolling ellipses communicate that work is still happening, even if the tool sits on a step for a long time with no sign of progress. Showing the elapsed time acknowledges that waiting, as if the tool is saying "I'm paying attention to how long this is taking!" And, "I know that your time is valuable." And, "Hold on a sec, I'm still cooking."</p>
 
             <h3>Detail: Positive Reinforcement</h3>
             <p>Even after all that waiting, it's not guaranteed that the query DuneAI has written will return the result the user had in mind. Search results that disappoint are not new territory for users, but what's totally unprecedented is a tool's ability to learn from your feedback! Every new prompt that DuneAI is part of its training set, and the reinforcement training it receives from human feedback makes the model better the more its used.</p>
 
-            <img src="../content/writing/ai-design-5.gif" alt="Feedback interface">
+            <img src="/content/writing/ai-design-5.gif" alt="Feedback interface">
 
             <p>First and foremost, this element communicates that a result was successfully returned (that's why it's green!). Using 👍 and 👎 emoji makes the barrier to leaving feedback as low as possible, and is honest about the (low) level of sophistication of the signal. The accuracy score communicates that DuneAI is self-evaluating and frames the feedback as fundamentally about accuracy: "Was this the query you were hoping to run?" rather than "Does this particular data mean good news for you?"</p>
 
             <h3>Detail: Big Picture</h3>
             <p>Tools with new capabilities can't rely on established patterns. The more AI tools we experiment with (and design!) the more expectations we'll have about how they behave. But until that time, it pays to be as explicit as possible. So DuneAI introduces itself at the top of the page with a simple value proposition:</p>
 
-            <img src="../content/writing/ai-design-6.png" alt="DuneAI value proposition">
+            <img src="/content/writing/ai-design-6.png" alt="DuneAI value proposition">
 
             <p>As in the example prompts, the key words are styled as highlighted tokens. The literal connection to prompt engineering is even more tenuous here in the context of marketing copy! But the title sets the tone for the tool. Amid all the other elements and design details, what matters most are words.</p>
 
