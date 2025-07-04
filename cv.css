@@ -51,9 +51,9 @@ a {
 
 .profile {
     width: 100%;
-    max-width: 540px;
+    max-width: 455px;
     margin: 0 auto;
-    padding: clamp(24px, calc((100vw - 540px) / 2), 72px) 0;
+    padding: clamp(24px, calc((100vw - 455px) / 2), 72px) 0;
 }
 
 .profileHeader {
@@ -149,20 +149,8 @@ a {
 .year {
     color: var(--grey3);
     font-variant-numeric: tabular-nums;
-    position: relative;
     flex-shrink: 0;
-    width: 200px;
-}
-
-.year::before {
-    content: "0000 — 0000";
-    visibility: hidden;
-}
-
-.year span {
-    position: absolute;
-    left: 0;
-    white-space: nowrap;
+    width: 115px;
 }
 
 .title a:hover {
@@ -196,13 +184,13 @@ a {
 /* Case Study Page Styles */
 .case-study {
     width: 100%;
-    max-width: 540px;
+    max-width: 455px;
     margin: 0 auto;
 }
 
 .back-link-container {
     width: 100%;
-    max-width: 540px;
+    max-width: 455px;
     margin: 1rem auto 2rem auto;
 }
 
