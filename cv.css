@@ -4,7 +4,7 @@
 }
 
 :root {
-    --font-size: 14px;
+    --font-size: 13px;
     --line-height: 1.6;
     --background: #fff;
     --grey1: #111;
@@ -61,6 +61,7 @@ a {
     flex-direction: row;
     align-items: center;
     column-gap: 16px;
+    padding-left: 236px; /* 200px (year width) + 36px (gap) */
 }
 
 .profileHeader h1 {
@@ -111,6 +112,7 @@ a {
     font-size: var(--font-size);
     font-weight: normal;
     margin-bottom: calc((var(--font-size) * var(--line-height)) / 2);
+    padding-left: 236px; /* 200px (year width) + 36px (gap) */
 }
 
 .experiences {
