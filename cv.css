@@ -60,7 +60,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 82px;
     padding-left: 0; /* Align with left column (year text) */
 }
 
