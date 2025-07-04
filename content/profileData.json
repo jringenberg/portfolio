@@ -1,0 +1,422 @@
+{
+  "general": {
+    "profilePhoto": "/content/media/profilePhoto.jpg",
+    "username": "ringenberg",
+    "displayName": "Joe Ringenberg",
+    "profession": "Software Design",
+    "location": null,
+    "pronouns": null,
+    "byline": "Software Design",
+    "website": "jringenberg.com",
+    "websiteURL": "http://jringenberg.com",
+    "about": null,
+    "status": {
+      "text": "Hello! This is a summary of my work and background.\nIf you want to find out a little more about me, check out jringenberg.com.",
+      "emoji": "☕️",
+      "timestamp": "2023-07-24T18:28:11.775Z"
+    },
+    "sectionOrder": [
+      "Side Projects",
+      "Projects",
+      "Exhibitions",
+      "Speaking",
+      "Writing",
+      "Awards",
+      "Features",
+      "Work Experience",
+      "Volunteering",
+      "Education",
+      "Certifications",
+      "Contact",
+      "Teams"
+    ]
+  },
+  "projects": [
+    {
+      "id": "fSmv2RsQ7cvomFaBJloF",
+      "year": "2023",
+      "heading": "DuneAI at Dune",
+      "url": "http://dune.com/ai",
+      "collaborators": [],
+      "description": "Design notes on exploring patterns in the AI-design space in general, and for Dune's AI tool specifically.",
+      "attachments": [],
+      "type": "project",
+      "title": "DuneAI",
+      "company": "Dune"
+    },
+    {
+      "id": "zWJ2N30sEDhh2Z35Iqi5",
+      "year": "2023",
+      "heading": "Backed V2",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "project",
+      "title": "Backed V2",
+      "company": null
+    },
+    {
+      "id": "KAgTnAyYAflraC0IOt53",
+      "year": "2022",
+      "heading": "Backed V1",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "project",
+      "title": "Backed V1",
+      "company": null
+    },
+    {
+      "id": "ZxZHtssWJAPvO9tChVke",
+      "year": "2021",
+      "heading": "Video Accessibility at Wistia",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "project",
+      "title": "Video Accessibility",
+      "company": "Wistia"
+    },
+    {
+      "id": "n3L8hy3yQLvveauCJTfK",
+      "year": "2020",
+      "heading": "Better Swag at Wistia",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "project",
+      "title": "Better Swag",
+      "company": "Wistia"
+    }
+  ],
+  "sideProjects": [
+    {
+      "id": "ttchFJ8wd0l0aYqYPt22",
+      "year": "Ongoing",
+      "heading": "Onchain Art",
+      "url": "https://gallery.so/jringenberg/galleries/2QXZ53GrSyEOhwPji5PHWXulb0M",
+      "collaborators": [],
+      "description": "This gallery is a collection of NFT projects I have designed. They are all drawn and animated in SVG code which is stored entirely onchain, allowing the art to update based on transaction data.",
+      "attachments": [],
+      "type": "sideProject",
+      "title": "Onchain Art",
+      "company": null
+    },
+    {
+      "id": "EZMzMo1hfqjgu4TWZZ96",
+      "year": "Ongoing",
+      "heading": "Woodworking",
+      "url": "http://jringenberg.onuniverse.com",
+      "collaborators": [],
+      "description": "This microsite is a gallery of furniture projects. Woodworking is a constructive hobby, literally, and it's also a practice of material awareness, instinct, and craft.",
+      "attachments": [],
+      "type": "sideProject",
+      "title": "Woodworking",
+      "company": null
+    }
+  ],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "jqd21p9KePmbu2J4dg9v",
+      "year": "2022 — Now",
+      "heading": "Founding Designer at Backed",
+      "url": null,
+      "collaborators": [],
+      "description": "Incubated at Coinbase, Backed launched a series of protocols exploring peer-to-peer and peer-to-pool lending using digital assets as collateral.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Founding Designer",
+      "company": "Backed",
+      "location": null
+    },
+    {
+      "id": "9VZkY6jVuPA4nPWOrRv9",
+      "year": "2021 — 2022",
+      "heading": "Product Designer at Coinbase",
+      "url": "http://coinbase.com",
+      "collaborators": [],
+      "description": "I joined a “10% project” focused on peer-to-peer lending which incubated Backed, a startup funded by Coinbase Ventures.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Product Designer",
+      "company": "Coinbase",
+      "location": null
+    },
+    {
+      "id": "mlT9DS7fbRmgKMNfKNvr",
+      "year": "2020 — 2021",
+      "heading": "Lead Product Designer at The Wanderlust Group",
+      "url": "http://thewanderlustgroup.com",
+      "collaborators": [],
+      "description": "Provided mentorship within design discipline and defined design direction for Dockwa, a sailing/marina app.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Lead Product Designer",
+      "company": "The Wanderlust Group",
+      "location": null
+    },
+    {
+      "id": "1w3den7LQCbqBme00g6i",
+      "year": "2018 — 2020",
+      "heading": "Principal Product Designer at Wistia",
+      "url": "http://wistia.com",
+      "collaborators": [],
+      "description": "Led the design of Wistia's platform tools and video player.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Principal Product Designer",
+      "company": "Wistia",
+      "location": null
+    },
+    {
+      "id": "hczmoR2Ll7MJPJXoC7yd",
+      "year": "2011 — 2018",
+      "heading": "Director of Design at Wistia",
+      "url": null,
+      "collaborators": [],
+      "description": "Scaled the design team from myself (first design hire) to a team of 7 designers and researchers.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Director of Design",
+      "company": "Wistia",
+      "location": null
+    }
+  ],
+  "volunteering": [],
+  "education": [
+    {
+      "id": "eoRJVYVJF9WFXCZ8mPmC",
+      "year": "2006 — 2010",
+      "heading": "Master of Architecture at Harvard University",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "education",
+      "degree": "Master of Architecture",
+      "school": "Harvard University",
+      "location": "Cambridge, MA"
+    },
+    {
+      "id": "MGcUA8BA9HmsymI1OfAr",
+      "year": "2002 — 2006",
+      "heading": "Philosophy at Taylor University",
+      "url": null,
+      "collaborators": [],
+      "description": null,
+      "attachments": [],
+      "type": "education",
+      "degree": "Philosophy",
+      "school": "Taylor University",
+      "location": "Upland, IN"
+    }
+  ],
+  "certifications": [],
+  "contact": [],
+  "allCollections": [
+    {
+      "name": "Side Projects",
+      "items": [
+        {
+          "id": "ttchFJ8wd0l0aYqYPt22",
+          "year": "Ongoing",
+          "heading": "Onchain Art",
+          "url": "https://gallery.so/jringenberg/galleries/2QXZ53GrSyEOhwPji5PHWXulb0M",
+          "collaborators": [],
+          "description": "This gallery is a collection of NFT projects I have designed. They are all drawn and animated in SVG code which is stored entirely onchain, allowing the art to update based on transaction data.",
+          "attachments": [],
+          "type": "sideProject",
+          "title": "Onchain Art",
+          "company": null
+        },
+        {
+          "id": "EZMzMo1hfqjgu4TWZZ96",
+          "year": "Ongoing",
+          "heading": "Woodworking",
+          "url": "http://jringenberg.onuniverse.com",
+          "collaborators": [],
+          "description": "This microsite is a gallery of furniture projects. Woodworking is a constructive hobby, literally, and it's also a practice of material awareness, instinct, and craft.",
+          "attachments": [],
+          "type": "sideProject",
+          "title": "Woodworking",
+          "company": null
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "items": [
+        {
+          "id": "fSmv2RsQ7cvomFaBJloF",
+          "year": "2023",
+          "heading": "DuneAI at Dune",
+          "url": "http://dune.com/ai",
+          "collaborators": [],
+          "description": "Design notes on exploring patterns in the AI-design space in general, and for Dune's AI tool specifically.",
+          "attachments": [],
+          "type": "project",
+          "title": "DuneAI",
+          "company": "Dune"
+        },
+        {
+          "id": "zWJ2N30sEDhh2Z35Iqi5",
+          "year": "2023",
+          "heading": "Backed V2",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "project",
+          "title": "Backed V2",
+          "company": null
+        },
+        {
+          "id": "KAgTnAyYAflraC0IOt53",
+          "year": "2022",
+          "heading": "Backed V1",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "project",
+          "title": "Backed V1",
+          "company": null
+        },
+        {
+          "id": "ZxZHtssWJAPvO9tChVke",
+          "year": "2021",
+          "heading": "Video Accessibility at Wistia",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "project",
+          "title": "Video Accessibility",
+          "company": "Wistia"
+        },
+        {
+          "id": "n3L8hy3yQLvveauCJTfK",
+          "year": "2020",
+          "heading": "Better Swag at Wistia",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "project",
+          "title": "Better Swag",
+          "company": "Wistia"
+        }
+      ]
+    },
+    {
+      "name": "Work Experience",
+      "items": [
+        {
+          "id": "jqd21p9KePmbu2J4dg9v",
+          "year": "2022 — Now",
+          "heading": "Founding Designer at Backed",
+          "url": null,
+          "collaborators": [],
+          "description": "Incubated at Coinbase, Backed launched a series of protocols exploring peer-to-peer and peer-to-pool lending using digital assets as collateral.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Founding Designer",
+          "company": "Backed",
+          "location": null
+        },
+        {
+          "id": "9VZkY6jVuPA4nPWOrRv9",
+          "year": "2021 — 2022",
+          "heading": "Product Designer at Coinbase",
+          "url": "http://coinbase.com",
+          "collaborators": [],
+          "description": "I joined a “10% project” focused on peer-to-peer lending which incubated Backed, a startup funded by Coinbase Ventures.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Product Designer",
+          "company": "Coinbase",
+          "location": null
+        },
+        {
+          "id": "mlT9DS7fbRmgKMNfKNvr",
+          "year": "2020 — 2021",
+          "heading": "Lead Product Designer at The Wanderlust Group",
+          "url": "http://thewanderlustgroup.com",
+          "collaborators": [],
+          "description": "Provided mentorship within design discipline and defined design direction for Dockwa, a sailing/marina app.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Lead Product Designer",
+          "company": "The Wanderlust Group",
+          "location": null
+        },
+        {
+          "id": "1w3den7LQCbqBme00g6i",
+          "year": "2018 — 2020",
+          "heading": "Principal Product Designer at Wistia",
+          "url": "http://wistia.com",
+          "collaborators": [],
+          "description": "Led the design of Wistia's platform tools and video player.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Principal Product Designer",
+          "company": "Wistia",
+          "location": null
+        },
+        {
+          "id": "hczmoR2Ll7MJPJXoC7yd",
+          "year": "2011 — 2018",
+          "heading": "Director of Design at Wistia",
+          "url": null,
+          "collaborators": [],
+          "description": "Scaled the design team from myself (first design hire) to a team of 7 designers and researchers.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Director of Design",
+          "company": "Wistia",
+          "location": null
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "items": [
+        {
+          "id": "eoRJVYVJF9WFXCZ8mPmC",
+          "year": "2006 — 2010",
+          "heading": "Master of Architecture at Harvard University",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "education",
+          "degree": "Master of Architecture",
+          "school": "Harvard University",
+          "location": "Cambridge, MA"
+        },
+        {
+          "id": "MGcUA8BA9HmsymI1OfAr",
+          "year": "2002 — 2006",
+          "heading": "Philosophy at Taylor University",
+          "url": null,
+          "collaborators": [],
+          "description": null,
+          "attachments": [],
+          "type": "education",
+          "degree": "Philosophy",
+          "school": "Taylor University",
+          "location": "Upland, IN"
+        }
+      ]
+    }
+  ]
+}
