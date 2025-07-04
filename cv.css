@@ -61,7 +61,7 @@ a {
     flex-direction: row;
     align-items: center;
     column-gap: 82px;
-    padding-left: 0; /* Align with left column (year text) */
+    padding-left: 151px; /* 115px (year width) + 36px (gap) - align with right column content */
 }
 
 .profileHeader h1 {
