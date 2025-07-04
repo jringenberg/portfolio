@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is Joe</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕️</text></svg>">
+    <style>
+        @font-face {
+            font-family: "MabryPro-Light";
+            src: url("MabryPro-Light.ttf");
+        }
+
+        body {
+            background-color: #003832;
+            color: white;
+            margin-bottom: 8em;
+        }
+
+        .story {
+            font-family: "MabryPro-Light", Arial, sans-serif;
+            font-size: 3em;
+            width: 80%;
+            margin: auto;
+            line-height: 1.5em;
+            margin-top: 2em;
+        }
+
+        .sentence {
+            display: inline;
+        }
+
+        .image {
+            display: inline-block;
+            vertical-align: bottom;
+            width: 1.5em;
+            height: 1.5em;
+            margin-left: 0.2em;
+            margin-right: 0.2em;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .image img.small {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            object-fit: contain;
+        }
+
+        .image img.zoom {
+            position: absolute;
+            z-index: 999;
+            width: 8em;
+            height: 8em;
+            top: -3em; /* Adjust as needed to center the image */
+            left: -3em; /* Adjust as needed to center the image */
+            object-fit: contain;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        a {
+            cursor: pointer;
+            color: #F2FF5E;
+            text-decoration: underline;
+        }
+        a.active {
+            color: #70C5B0;
+        }
+
+        @media (max-width: 768px) {
+            .story {
+                font-size: 2em;
+            }
+        }       
+        @media (min-width: 1290px) {
+            .story {
+                font-size: 4em;
+            }
+        }  
+
+    </style>
+</head>
+<body>
+    <!-- Story Section -->
+    <div id="story" class="story">
+        <div class="sentence" data-show="1" data-level="1">
+            This is <a class="link" href="#" data-show="2">Joe</a>
+            <div class="image">
+                <img src="img/cuppa.png" alt="cup of Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="2" data-level="2">
+            This is also <a class="link" href="#" data-show="3">Joe</a>
+            <div class="image">
+                <img src="img/profile.jpeg" alt="photo of Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="3" data-level="3">
+            Joe is a <a class="link" href="#" data-show="4">designer</a> who lives in <a class="link" href="#" data-show="5">Vermont</a>
+            <div class="image">
+                <img src="img/vermont.png" alt="photo of Vermont" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="4" data-level="4">
+            Professionally, Joe designs <a class="link" href="#" data-show="6">software</a>. Unprofessionally, he designs <a class="link" href="#" data-show="7">other things</a>
+            <div class="image">
+                <img src="img/table.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="5" data-level="4">
+            Vermont is a great place to raise a <a class="link" href="#" data-show="8">family</a> and explore creative <a class="link" href="#" data-show="12">projects</a>
+            <div class="image">
+                <img src="img/butternut.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="8" data-level="5">
+            It's a homeschool family, which means taking extra time for incubating <a class="link" href="#" data-show="9">curiosity</a> and for joy-rides
+            <div class="image">
+                <img src="img/pickup.png" alt="pickup truck joy-rides" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="9" data-level="6">
+            Practicing curiosity is a lifelong <a class="link" href="#" data-show="10">gateway skill</a> with no upper-bound
+            <div class="image">
+                <img src="img/curious.png" alt="Curiosity" class="small">
+            </div>
+        </div>
+
+
+
+        <div class="sentence hidden" data-show="12" data-level="5">
+            Joe's hobbies revolve around trees: planting them, cutting them down, <a class="link" href="#" data-show="13">making things out of wood</a>
+            <div class="image">
+                <img src="img/syruppp.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="13" data-level="6">
+            Here's a
+            <a href="https://jringenberg.onuniverse.com/" target="_blank">microsite ↗</a>
+            of carpentry projects. Woodworking is constructive — slow handcrafts build
+            <a class="link" href="#" data-show="10">embodied knowledge</a>            
+            and creative instincts
+            <div class="image">
+                <img src="img/workshop.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="6" data-level="5">
+            Joe's been a product designer for 10 years, with expertise in
+            <a class="link" href="#" data-show="20">video tools</a> and
+            <a class="link" href="#" data-show="23">crypto</a>
+            <div class="image">
+                <img src="img/borrower.svg" alt="Joe" class="small">
+            </div>      
+        </div>
+
+        <div class="sentence hidden" data-show="7" data-level="5">
+            Joe's creative side projects range from
+            <a href="https://gallery.so/jringenberg/galleries/2QXZ53GrSyEOhwPji5PHWXulb0M" target="_blank">NFT collections ↗</a> to bedroom
+            <a href="https://jringenberg.onuniverse.com/" target="_blank">furniture ↗</a>
+            <div class="image">
+                <img src="img/bed.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+
+        <div class="sentence hidden" data-show="20" data-level="6">
+            On
+            <a href="https://read.cv/ringenberg" target="_blank">read.cv ↗</a>
+            you can read Joe's CV and some key projects, like the 
+            <a class="link" href="#" data-show="22">most accessibile</a>
+            video player on the internet            
+            <div class="image">
+                <img src="img/access.png" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="22" data-level="7">
+            Accessibility is usability. Thinking about all the ways things get used by humans is <a class="link" href="#" data-show="10">good design.</a>
+        </div>
+
+        <div class="sentence hidden" data-show="23" data-level="6">
+            Joe is an <a class="link" href="#" data-show="26">advocate</a> for crypto, which makes up most of his recent work, both <a class="link" href="#" data-show="24">on</a> and <a class="link" href="#" data-show="25">off</a> the clock
+        <div class="image">
+            <img src="img/acb.svg" alt="Joe" class="small">
+        </div> 
+        </div>
+
+        <div class="sentence hidden" data-show="24" data-level="7">
+            On
+            <a href="https://read.cv/ringenberg" target="_blank">read.cv ↗</a>
+            you can read Joe's CV and find out about his recent work at Coinbase and Backed       
+            <div class="image">
+                <img src="img/pawnshop.svg" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="25" data-level="7">
+            Joe has created a number of NFT projects that use onchain SVG, which you can see in this
+            <a href="https://gallery.so/jringenberg/galleries/2QXZ53GrSyEOhwPji5PHWXulb0M" target="_blank">gallery ↗</a>
+            <div class="image">
+                <img src="img/sunny.svg" alt="Joe" class="small">
+            </div>
+        </div>
+
+        <div class="sentence hidden" data-show="26" data-level="7">
+            Crypto is <a class="link" href="#" data-show="10">important for humanity</a> because economic freedom and access to financial tools are human rights.
+        </div>
+
+        <div class="sentence hidden" data-show="10" data-level="17">
+            If you're curious about that, get in touch and say hi. You can find Joe online on
+            <a href="https://read.cv/ringenberg" target="_blank">read.cv ↗</a>, 
+            <a href="https://twitter.com/jringenberg" target="_blank">twitter ↗</a>, or 
+            <a href="https://www.linkedin.com/in/joe-ringenberg/" target="_blank">linkedin ↗</a>  ☺
+        </div>
+
+    </div>
+
+<script>
+    // Adding interactivity to links
+    var links = document.querySelectorAll(".link");
+    links.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            var show = this.getAttribute("data-show");
+            var level = parseInt(document.querySelector('.sentence[data-show="'+ show +'"]').getAttribute("data-level"));
+            var sentence = document.querySelector('.sentence[data-show="'+ show +'"]');
+
+            // Check if the clicked sentence is currently hidden or visible
+            if (sentence.classList.contains("hidden")) {
+                // If it's hidden, show it and add the active class to the clicked link
+                sentence.classList.remove("hidden");
+                this.classList.add("active");
+
+                // Then hide all other sentences at the same or a higher level
+                document.querySelectorAll('.sentence').forEach(function(elem) {
+                    var elemLevel = parseInt(elem.getAttribute("data-level"));
+                    if (elemLevel >= level && elem !== sentence) {
+                        elem.classList.add("hidden");
+                        // Remove active class from the link corresponding to the hidden sentence
+                        document.querySelector('.link[data-show="'+ elem.getAttribute("data-show") +'"]').classList.remove("active");
+                    }
+                });
+            } else {
+                // If it's visible, hide it and remove the active class from the clicked link
+                sentence.classList.add("hidden");
+                this.classList.remove("active");
+
+                // Then hide all sentences at a higher level
+                document.querySelectorAll('.sentence').forEach(function(elem) {
+                    var elemLevel = parseInt(elem.getAttribute("data-level"));
+                    if (elemLevel > level) {
+                        elem.classList.add("hidden");
+                        // Remove active class from the link corresponding to the hidden sentence
+                        document.querySelector('.link[data-show="'+ elem.getAttribute("data-show") +'"]').classList.remove("active");
+                    }
+                });
+            }
+        });
+    });
+
+    // Adding interactivity to images
+    var images = document.querySelectorAll(".image");
+    images.forEach(function(image) {
+        var img = image.querySelector("img");
+        img.addEventListener("click", function() {
+            if (this.classList.contains("small")) {
+                this.classList.remove("small");
+                this.classList.add("zoom");
+            } else {
+                this.classList.remove("zoom");
+                this.classList.add("small");
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 300 300">
+    <defs>
+
+        <polygon id="triangle" points="0,-6 11,5 -11,5" fill="#FFCF32" />
+        <radialGradient id="background-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="60%" style="stop-color:#FFE2B7;stop-opacity:.2">
+            </stop>
+            <stop offset="100%" style="stop-color:#FFE2B7;stop-opacity:.5">
+            </stop>
+        </radialGradient>
+
+    </defs>
+    <rect width="100%" height="100%" fill="white"></rect>
+    <rect width="100%" height="100%" fill="url(#background-gradient)">
+        <animate attributeName="fill-opacity" values="0.3;.85;0.3" dur="1.6s" repeatCount="indefinite"
+            calcMode="spline" keySplines="0.2 0 0.8 1;0.2 0 0.8 1" keyTimes="0;0.3;1"/>
+    </rect>
+    <g transform="translate(150, 150)">
+        <g id="animated-group">
+            <!-- Circle in the center -->
+            <circle cx="0" cy="0" r="96" fill="#FFCF32" />
+
+            <g id="rotating-triangles">
+                <use href="#triangle" transform="rotate(0) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(10) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(20) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(30) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(40) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(50) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(60) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(70) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(80) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(90) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(100) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(110) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(120) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(130) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(140) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(150) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(160) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(170) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(180) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(190) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(200) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(210) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(220) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(230) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(240) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(250) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(260) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(270) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(280) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(290) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(300) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(310) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(320) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(330) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(340) translate(100,0) rotate(90)" />
+                <use href="#triangle" transform="rotate(350) translate(100,0) rotate(90)" />
+                <animateTransform
+                    attributeType="xml"
+                    attributeName="transform"
+                    type="rotate"
+                    from="0"
+                    to="360"
+                    begin="0s"
+                    dur="120s"
+                    repeatCount="indefinite"
+                    additive="sum"
+                />
+            </g>
+                <animateTransform
+                    attributeType="xml"
+                    attributeName="transform"
+                    type="scale"
+                    values="1;1.03;1"
+                    begin="0s"
+                    dur="1.6s"
+                    repeatCount="indefinite"
+                    calcMode="spline"
+                    keySplines="0.2 0 0.8 1;0.2 0 0.8 1"
+                    keyTimes="0;0.3;1"
+                />
+        </g>
+        <text x="0" y="-12" fill="white" font-size="47" text-anchor="middle" dominant-baseline="central">⬩◡⬩</text>
+    </g>
+</svg>

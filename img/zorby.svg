@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+	<defs>
+		<radialGradient id="gzr" gradientUnits="userSpaceOnUse" r="145" cx="55" cy="-46" >
+			<stop offset="15%" stop-color="#dcc8d0"/>
+			<stop offset="30.21%" stop-color="#78c8cf" />
+			<stop offset="42.71%" stop-color="#4d959e" />
+			<stop offset="55.73%" stop-color="#305eb9" />
+			<stop offset="79.69%" stop-color="#311f12" />
+			<stop offset="90.63%" stop-color="#684232" />
+			<stop offset="100%" stop-color="#2d1c13"/>
+
+			<animate attributeName="r" values="145;125;145" dur="17s" repeatCount="indefinite" calcMode="spline" keySplines=".5 0 .5 1; .5 0 .5 1"/>
+			<animate attributeName="cx" values="55;100;0;55" keyTimes="0;.3;.7;1" dur="17s" repeatCount="indefinite" calcMode="spline"
+			keySplines=".5 .5 .5 1; .5 0 .5 1; .5 0 .5 .5"/>
+			<animate attributeName="cy" values="-46;36;-46" dur="17s" repeatCount="indefinite" calcMode="spline" 
+			keySplines="0.53 0.22 0.49 0.74; 0.53 0.22 0.49 0.74"/>
+
+		</radialGradient>
+	</defs>
+	<circle cx="55" cy="55" r="40" fill="url(#gzr)"/>
+	<circle cx="55" cy="55" r="39.5" stroke="rgba(0,0,0,0.075)" fill="transparent" stroke-width="1"/>
+</svg>
