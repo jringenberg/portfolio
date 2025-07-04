@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "MabryPro-Light";
+    src: url("../MabryPro-Light.ttf");
+}
+
 :root {
     --font-size: 14px;
     --line-height: 1.6;
@@ -59,8 +64,20 @@ a {
 }
 
 .profileHeader h1 {
-    font-size: 20px;
-    font-weight: 350;
+    font-family: "MabryPro-Light", Arial, sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0;
+}
+
+.profileHeader h1 a {
+    color: #F2FF5E;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.profileHeader h1 a:hover {
+    color: #70C5B0;
 }
 
 .byline {
@@ -68,8 +85,8 @@ a {
 }
 
 .profilePhoto {
-    width: 92px;
-    height: 92px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     flex-shrink: 0;
     background-color: var(--wash2);
