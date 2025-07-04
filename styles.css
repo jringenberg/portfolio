@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "MabryPro-Light";
+    src: url("MabryPro-Light.ttf");
+}
+
+body {
+    background-color: #003832;
+    color: white;
+    margin-bottom: 8em;
+}
+
+.story {
+    font-family: "MabryPro-Light", Arial, sans-serif;
+    font-size: 3em;
+    width: 80%;
+    margin: auto;
+    line-height: 1.5em;
+    margin-top: 2em;
+}
+
+.sentence {
+    display: inline;
+}
+
+.image {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    position: relative;
+    cursor: pointer;
+}
+
+.image img.small {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+}
+
+.image img.zoom {
+    position: absolute;
+    z-index: 999;
+    width: 8em;
+    height: 8em;
+    top: -3em; /* Adjust as needed to center the image */
+    left: -3em; /* Adjust as needed to center the image */
+    object-fit: contain;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+    color: #F2FF5E;
+    text-decoration: underline;
+}
+a.active {
+    color: #70C5B0;
+}
+
+@media (max-width: 768px) {
+    .story {
+        font-size: 2em;
+    }
+}       
+@media (min-width: 1290px) {
+    .story {
+        font-size: 4em;
+    }
+} 
