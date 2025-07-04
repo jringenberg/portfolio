@@ -51,9 +51,9 @@ a {
 
 .profile {
     width: 100%;
-    max-width: 455px;
+    max-width: 480px;
     margin: 0 auto;
-    padding: clamp(24px, calc((100vw - 455px) / 2), 72px) 0;
+    padding: clamp(24px, calc((100vw - 480px) / 2), 72px) 0;
 }
 
 .profileHeader {
@@ -185,13 +185,13 @@ a {
 /* Case Study Page Styles */
 .case-study {
     width: 100%;
-    max-width: 455px;
+    max-width: 480px;
     margin: 0 auto;
 }
 
 .back-link-container {
     width: 100%;
-    max-width: 455px;
+    max-width: 480px;
     margin: 1rem auto 2rem auto;
 }
 
