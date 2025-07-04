@@ -71,13 +71,13 @@ a {
 }
 
 .profileHeader h1 a {
-    color: #F2FF5E;
+    color: #003832;
     text-decoration: underline;
     cursor: pointer;
 }
 
 .profileHeader h1 a:hover {
-    color: #70C5B0;
+    color: #000000;
 }
 
 .byline {
