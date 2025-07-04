@@ -61,7 +61,7 @@ a {
     flex-direction: row;
     align-items: center;
     column-gap: 16px;
-    padding-left: 236px; /* 200px (year width) + 36px (gap) */
+    padding-left: 0; /* Align with left column (year text) */
 }
 
 .profileHeader h1 {
@@ -112,7 +112,7 @@ a {
     font-size: var(--font-size);
     font-weight: normal;
     margin-bottom: calc((var(--font-size) * var(--line-height)) / 2);
-    padding-left: 236px; /* 200px (year width) + 36px (gap) */
+    padding-left: 0; /* Align with left column (year text) */
 }
 
 .experiences {
