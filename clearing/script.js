@@ -178,6 +178,9 @@ class ArtifactGallery {
       if (!artifact.element) return;
 
       let wasDragging = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      const DRAG_THRESHOLD = 5; // Pixels of movement before considering it a drag (prevents suppressing taps)
 
       // Use Interact.js for dragging
       interact(artifact.element)
@@ -190,6 +193,8 @@ class ArtifactGallery {
                 return;
               }
               wasDragging = false;
+              dragStartX = event.clientX || event.touches?.[0]?.clientX || 0;
+              dragStartY = event.clientY || event.touches?.[0]?.clientY || 0;
               artifact.element.classList.add('dragging');
               // Bring to front when dragging starts
               this.bringToFront(artifact);
@@ -199,21 +204,37 @@ class ArtifactGallery {
               if (this.state.mode === 'focus') {
                 return;
               }
-              wasDragging = true; // Mark that we actually dragged
-              // Get current world position
-              const currentWorldX = artifact.x;
-              const currentWorldY = artifact.y;
               
-              // Drag delta is already in world coordinates (1:1 mapping)
-              const deltaWorldX = event.dx;
-              const deltaWorldY = event.dy;
+              // Calculate total movement distance
+              const currentX = event.clientX || event.touches?.[0]?.clientX || dragStartX;
+              const currentY = event.clientY || event.touches?.[0]?.clientY || dragStartY;
+              const moveDistance = Math.sqrt(
+                Math.pow(currentX - dragStartX, 2) + 
+                Math.pow(currentY - dragStartY, 2)
+              );
               
-              // Update artifact's world position (canonical transform)
-              artifact.x = currentWorldX + deltaWorldX;
-              artifact.y = currentWorldY + deltaWorldY;
+              // Only consider it a drag if movement exceeds threshold
+              if (moveDistance > DRAG_THRESHOLD) {
+                wasDragging = true; // Mark that we actually dragged
+              }
               
-              // Re-render
-              this.render();
+              // Only update position if we've actually dragged (not just a tap)
+              if (wasDragging) {
+                // Get current world position
+                const currentWorldX = artifact.x;
+                const currentWorldY = artifact.y;
+                
+                // Drag delta is already in world coordinates (1:1 mapping)
+                const deltaWorldX = event.dx;
+                const deltaWorldY = event.dy;
+                
+                // Update artifact's world position (canonical transform)
+                artifact.x = currentWorldX + deltaWorldX;
+                artifact.y = currentWorldY + deltaWorldY;
+                
+                // Re-render
+                this.render();
+              }
             },
             end: (event) => {
               artifact.element.classList.remove('dragging');
