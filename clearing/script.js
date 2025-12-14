@@ -27,7 +27,7 @@ class ArtifactGallery {
 
   async loadArtifacts() {
     try {
-      const response = await fetch('./artifacts.json');
+      const response = await fetch('/clearing/artifacts.json');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
