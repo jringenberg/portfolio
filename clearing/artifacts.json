@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "id": "red-box",
+      "label": "Red Box",
+      "blurb": "This vibrant red square represents the foundation of our design system. It stands as a bold statement of primary color and visual hierarchy.",
+      "x": -75,
+      "y": -50,
+      "rotation": 5,
+      "z": 2,
+      "width": 150,
+      "height": 150,
+      "color": "#ff0000",
+      "focusWidth": 50
+    },
+    {
+      "id": "blue-box",
+      "label": "Blue Box",
+      "blurb": "The calming blue rectangle embodies trust and stability in our interface. It serves as a secondary element that balances the visual weight of the composition.",
+      "x": -150,
+      "y": 25,
+      "rotation": -3,
+      "z": 0,
+      "width": 150,
+      "height": 150,
+      "color": "#0000ff",
+      "focusWidth": 50
+    },
+    {
+      "id": "green-box",
+      "label": "Green Box",
+      "blurb": "This fresh green element symbolizes growth and harmony within the design. It completes the color triad and brings natural balance to the overall layout.",
+      "x": 0,
+      "y": 25,
+      "rotation": 7,
+      "z": 1,
+      "width": 150,
+      "height": 150,
+      "color": "#00ff00",
+      "focusWidth": 50
+    }
+  ]
+}
+
