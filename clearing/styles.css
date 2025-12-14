@@ -26,13 +26,7 @@ body {
   cursor: default;
 }
 
-/* Mobile: scale everything down 25% to fit better */
-@media (max-width: 768px) {
-  #canvas {
-    transform: scale(0.75);
-    transform-origin: center center;
-  }
-}
+/* Mobile zoom is handled in JavaScript */
 
 #canvas {
   position: absolute;

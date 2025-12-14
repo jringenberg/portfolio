@@ -3,7 +3,7 @@
     {
       "id": "soup-docs-intro",
       "label": "Soup Protocol Documentation",
-      "blurb": "An onchain protocol for prediction markets. This technical diagram explains the core architecture of conditional tokens and decentralized order books.",
+      "blurb": "The Soup docs are styled like a digital whitepaper. A good introduction sets the stage, emphasizes benefits, and uses diagrams to establish the scope and introduce the cast of characters.",
       "x": 0,
       "y": 0,
       "rotation": 0,
@@ -30,7 +30,7 @@
     {
       "id": "single-market",
       "label": "Single Market View",
-      "blurb": "A focused view of a single prediction market, showing detailed information and trading interface.",
+      "blurb": "Prediction markets are a natural fit for social apps like Base. Combined with live sports updates and the chatter from your social graph, this is the screen you want open when you’re watching the Super Bowl.",
       "x": 296,
       "y": 15,
       "rotation": 5,
@@ -44,7 +44,7 @@
     {
       "id": "market-receipt",
       "label": "Receipt Detail",
-      "blurb": "A detail card showing purchase information for a specific bet, including cost, potential winnings, and position details.",
+      "blurb": "The receipt is the most screen-shotted and most shared element of prediction markets. Here, the background gradient is derived from the position and originating client, in this case “Yes, Eagles” (teal) and Coinbase (blue).",
       "x": 218,
       "y": 43,
       "rotation": 12,
@@ -58,7 +58,7 @@
     {
       "id": "clearing-tag",
       "label": "Clearing Co. Price Tag",
-      "blurb": "A simple price tag design for Clearing Co., representing the brand identity and pricing structure.",
+      "blurb": "Permissionless market creation enables niche, long-tail markets like a bazaar or bodega full of hitherto unpriced curiosities. In prediction markets where price equals probability, 99¢ is the price of sure bet.",
       "x": -186,
       "y": 170,
       "rotation": 15,
@@ -72,7 +72,7 @@
     {
       "id": "battleship",
       "label": "Battleship Grid",
-      "blurb": "A data grid showing numerical patterns and relationships, possibly representing game state or analytical data.",
+      "blurb": "When prediction market mechanics are onchain, open building blocks, novel use cases are unlocked. In this imagined case, one side of a game of Battleship is played by the crowd, betting on the likelihood of a hit in any square on the grid. Hit/miss is revealed periodically on the square with the highest volume.",
       "x": -235,
       "y": -55,
       "rotation": -8,

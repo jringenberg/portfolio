@@ -60,17 +60,41 @@ class ArtifactGallery {
       this.canvasTransform.y = rect.height / 2;
       this.updateCanvasTransform();
       
+      // Apply mobile zoom if needed
+      this.applyMobileZoom();
+      
       console.log('Canvas setup complete:', {
         containerSize: { width: rect.width, height: rect.height },
         transform: this.canvasTransform
       });
     });
     
-    // Panning disabled - only artifacts move
+    // Recalculate mobile zoom on window resize
+    window.addEventListener('resize', () => {
+      this.applyMobileZoom();
+    });
+  }
+
+  applyMobileZoom() {
+    // Only apply on mobile (screen width <= 768px)
+    // Scale to 0.8 (20% smaller) to fit artifacts better
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      this.canvas.style.transform = `translate(${this.canvasTransform.x}px, ${this.canvasTransform.y}px) scale(0.8)`;
+    } else {
+      // Desktop: no scale, just translate
+      this.canvas.style.transform = `translate(${this.canvasTransform.x}px, ${this.canvasTransform.y}px)`;
+    }
   }
 
   updateCanvasTransform() {
-    this.canvas.style.transform = `translate(${this.canvasTransform.x}px, ${this.canvasTransform.y}px)`;
+    // Apply mobile zoom if on mobile, otherwise just translate
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      this.canvas.style.transform = `translate(${this.canvasTransform.x}px, ${this.canvasTransform.y}px) scale(0.8)`;
+    } else {
+      this.canvas.style.transform = `translate(${this.canvasTransform.x}px, ${this.canvasTransform.y}px)`;
+    }
     this.render(); // Re-render artifacts with new canvas transform
   }
 
