@@ -72,7 +72,7 @@
     {
       "id": "battleship",
       "label": "Battleship Grid",
-      "blurb": "When prediction market mechanics are onchain, open building blocks, novel use cases are unlocked. In this imagined case, one side of a game of Battleship is played by the crowd, betting on the likelihood of a hit in any square on the grid. Hit/miss is revealed periodically on the square with the highest volume.",
+      "blurb": "Putting the building blocks of prediction markets onchain unlocks novel possibilities. Here, one side of a game of Battleship is played by the crowd, betting on the likelihood of a hit in any square on the grid. Hit/miss is revealed periodically on the square with the highest volume.",
       "x": -185,
       "y": -55,
       "rotation": -8,
