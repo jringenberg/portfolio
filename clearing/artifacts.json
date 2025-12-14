@@ -80,7 +80,8 @@
       "width": 416,
       "height": 312,
       "image": "/clearing/images/battleship.png",
-      "focusWidth": 50
+      "focusWidth": 50,
+      "focusScale": 0.9
     }
   ]
 }
