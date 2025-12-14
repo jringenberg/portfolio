@@ -92,7 +92,7 @@ body {
   z-index: 2001;
   display: none;
   overflow-y: auto; /* Allow vertical scrolling for tall content */
-  overflow-x: visible; /* Allow shadows to extend horizontally (CSS may compute as auto, but padding helps) */
+  overflow-x: hidden; /* Hide horizontal overflow, padding gives shadows space */
   pointer-events: auto;
   cursor: pointer; /* Pointing hand cursor */
 }
@@ -106,7 +106,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 10vh 0 10vh 0; /* Vertical padding, horizontal padding set dynamically via JS for column width */
+  padding: 10vh 30px 10vh 30px; /* Vertical padding + horizontal padding for shadow clearance */
+  box-sizing: border-box;
 }
 
 .focus-label {
@@ -120,21 +121,24 @@ body {
   line-height: 1.5;
   pointer-events: auto;
   user-select: text;
+  padding: 0 30px; /* Match container padding for alignment */
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .focus-label {
-    max-width: calc(100% - 40px); /* Match image width on mobile */
+    max-width: 100%; /* Full width minus container padding on mobile */
+    padding: 0 24px; /* Match container padding on mobile */
     font-size: 1.1rem; /* Slightly smaller on mobile for better fit */
     line-height: 1.6; /* Slightly more line height for readability */
   }
   
   #focus-container.active {
-    padding: 5vh 0 5vh 0; /* Less vertical padding, horizontal padding set dynamically via JS */
+    padding: 5vh 24px 5vh 24px; /* Less vertical padding, horizontal padding for shadows */
   }
   
   .focus-artifact {
-    margin: 16px; /* Slightly less margin on mobile */
+    margin: 12px; /* Slightly less margin on mobile */
   }
   
   /* Prevent text selection issues on mobile */
@@ -149,23 +153,18 @@ body {
   position: relative;
   pointer-events: none;
   width: 100%;
-  max-width: 100%;
+  max-width: 500px; /* Match label max-width on desktop */
   flex-shrink: 0; /* Don't shrink */
   cursor: pointer; /* Pointing hand cursor */
-  margin: 20px; /* Add margin to give drop shadows space to extend on all sides */
+  margin: 0; /* No margin, padding on container handles shadow space */
 }
 
-/* Desktop: max-width 500px for focus column */
-@media (min-width: 769px) {
-  .focus-artifact {
-    max-width: 500px;
-  }
-}
+/* Desktop: max-width already set above */
 
-/* Mobile: allow full width with padding (80% of viewport) */
+/* Mobile: allow full width with padding */
 @media (max-width: 768px) {
   .focus-artifact {
-    max-width: 80%; /* 80% of viewport width on mobile */
+    max-width: 100%; /* Full width minus container padding on mobile */
   }
   
   .focus-label {

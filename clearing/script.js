@@ -459,9 +459,8 @@ class ArtifactGallery {
       }
     }
     
-    // Set container padding based on calculated gutters
-    focusContainer.style.paddingLeft = gutterPercent + '%';
-    focusContainer.style.paddingRight = gutterPercent + '%';
+    // Container padding is handled by CSS for shadow clearance
+    // Column width is controlled by max-width on .focus-artifact and .focus-label
     
     // Create text label
     const label = document.createElement('div');
@@ -499,8 +498,7 @@ class ArtifactGallery {
     if (focusContainer) {
       focusContainer.classList.remove('active');
       focusContainer.innerHTML = ''; // Clear content
-      focusContainer.style.paddingLeft = '';
-      focusContainer.style.paddingRight = '';
+      // Padding is handled by CSS
     }
     if (overlay) {
       overlay.classList.remove('active');
