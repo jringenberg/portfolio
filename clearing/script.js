@@ -178,9 +178,11 @@ class ArtifactGallery {
       if (!artifact.element) return;
 
       let wasDragging = false;
+      let dragEndTime = 0; // Timestamp when drag ended
       let dragStartX = 0;
       let dragStartY = 0;
       const DRAG_THRESHOLD = 5; // Pixels of movement before considering it a drag (prevents suppressing taps)
+      const CLICK_AFTER_DRAG_DELAY = 50; // Milliseconds - ignore clicks this soon after drag ends
 
       // Use Interact.js for dragging
       interact(artifact.element)
@@ -238,7 +240,13 @@ class ArtifactGallery {
             },
             end: (event) => {
               artifact.element.classList.remove('dragging');
-              // Reset wasDragging after drag ends, so next click will work
+              
+              // Record drag end timestamp if we actually dragged
+              if (wasDragging) {
+                dragEndTime = Date.now();
+              } else {
+                dragEndTime = 0; // Reset if no drag happened
+              }
               wasDragging = false;
             }
           }
@@ -246,8 +254,9 @@ class ArtifactGallery {
 
       // Click handler for focus mode (only if not currently dragging)
       artifact.element.addEventListener('click', (e) => {
-        // Don't focus if we're currently in a drag operation
-        if (wasDragging) {
+        // Don't focus if click happens too soon after drag ends (prevents accidental focus on drag end)
+        const timeSinceDragEnd = Date.now() - dragEndTime;
+        if (wasDragging || (dragEndTime > 0 && timeSinceDragEnd < CLICK_AFTER_DRAG_DELAY)) {
           return;
         }
         
