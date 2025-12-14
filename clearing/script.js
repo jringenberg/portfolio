@@ -383,11 +383,13 @@ class ArtifactGallery {
     overlay.classList.add('active');
     
     // Get focus width percentage from artifact (default to 50% if not specified)
-    const focusWidthPercent = artifact.focusWidth || 50;
+    // On mobile, use 80% for better readability
+    const rect = this.canvasContainer.getBoundingClientRect();
+    const isMobile = rect.width <= 768;
+    const focusWidthPercent = isMobile ? 80 : (artifact.focusWidth || 50);
     const gutterPercent = (100 - focusWidthPercent) / 2; // Equal gutters on each side
     
     // Calculate column width based on artifact's focusWidth percentage
-    const rect = this.canvasContainer.getBoundingClientRect();
     let columnWidth = rect.width * (focusWidthPercent / 100);
     
     // Apply max-width of 500px on desktop (screens wider than 768px)

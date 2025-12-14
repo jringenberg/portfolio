@@ -26,6 +26,14 @@ body {
   cursor: default;
 }
 
+/* Mobile: scale everything down 25% to fit better */
+@media (max-width: 768px) {
+  #canvas {
+    transform: scale(0.75);
+    transform-origin: center center;
+  }
+}
+
 #canvas {
   position: absolute;
   width: 100%;
@@ -90,6 +98,7 @@ body {
   z-index: 2001;
   display: none;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll but allow vertical */
   pointer-events: auto;
   cursor: pointer; /* Pointing hand cursor */
 }
@@ -145,6 +154,8 @@ body {
   max-width: 100%;
   flex-shrink: 0; /* Don't shrink */
   cursor: pointer; /* Pointing hand cursor */
+  padding: 12px; /* Add padding to accommodate drop shadow */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Desktop: max-width 500px for focus column */
@@ -154,10 +165,14 @@ body {
   }
 }
 
-/* Mobile: allow full width with padding */
+/* Mobile: allow full width with padding (80% of viewport) */
 @media (max-width: 768px) {
   .focus-artifact {
-    max-width: calc(100% - 40px); /* 20px padding on each side */
+    max-width: 80%; /* 80% of viewport width on mobile */
+  }
+  
+  .focus-label {
+    max-width: 80%; /* Match artifact width on mobile */
   }
 }
 
