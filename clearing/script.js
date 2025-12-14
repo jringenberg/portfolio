@@ -120,10 +120,13 @@ class ArtifactGallery {
       return;
     }
 
-    console.log('Rendering', this.artifacts.length, 'artifacts');
+    // Filter out hidden artifacts
+    const visibleArtifacts = this.artifacts.filter(a => !a.hidden);
+    
+    console.log('Rendering', visibleArtifacts.length, 'artifacts');
 
     // Sort by z-order
-    const sortedArtifacts = [...this.artifacts].sort((a, b) => a.z - b.z);
+    const sortedArtifacts = [...visibleArtifacts].sort((a, b) => a.z - b.z);
 
     sortedArtifacts.forEach((artifact, index) => {
       // Create element if it doesn't exist
@@ -134,9 +137,55 @@ class ArtifactGallery {
         
         const box = document.createElement('div');
         box.className = 'artifact-box';
-        box.style.width = artifact.width + 'px';
-        box.style.height = artifact.height + 'px';
-        box.style.backgroundColor = artifact.color;
+        
+        // Use image if provided, otherwise fall back to colored box
+        if (artifact.image) {
+          const img = document.createElement('img');
+          img.src = artifact.image;
+          img.style.pointerEvents = 'auto'; // Ensure image can be interacted with
+          artifact.element.draggableElement = img; // Store reference for interact.js
+          
+          // Wait for image to load, then set box size to match image
+          img.onload = () => {
+            // Use the image's natural dimensions, scaled to fit within artifact bounds if needed
+            const naturalWidth = img.naturalWidth;
+            const naturalHeight = img.naturalHeight;
+            const naturalAspect = naturalWidth / naturalHeight;
+            const artifactAspect = artifact.width / artifact.height;
+            
+            let boxWidth, boxHeight;
+            if (naturalAspect > artifactAspect) {
+              // Image is wider - fit to width
+              boxWidth = artifact.width;
+              boxHeight = artifact.width / naturalAspect;
+            } else {
+              // Image is taller - fit to height
+              boxHeight = artifact.height;
+              boxWidth = artifact.height * naturalAspect;
+            }
+            
+            box.style.width = boxWidth + 'px';
+            box.style.height = boxHeight + 'px';
+            
+            // Update artifact dimensions to match (for positioning calculations)
+            artifact.actualWidth = boxWidth;
+            artifact.actualHeight = boxHeight;
+            
+            // Re-render to update positions
+            this.render();
+          };
+          
+          box.appendChild(img);
+        } else {
+          // Colored box - use artifact dimensions directly
+          box.style.width = artifact.width + 'px';
+          box.style.height = artifact.height + 'px';
+          box.style.backgroundColor = artifact.color || '#ccc';
+          artifact.element.draggableElement = box; // Fall back to box for colored boxes
+          artifact.actualWidth = artifact.width;
+          artifact.actualHeight = artifact.height;
+        }
+        
         artifact.element.appendChild(box);
         
         this.canvas.appendChild(artifact.element);
@@ -144,9 +193,12 @@ class ArtifactGallery {
       }
 
       // Get world transform (canonical, never mutated by focus)
+      // Use actual dimensions if available (from image), otherwise fall back to artifact dimensions
+      const width = artifact.actualWidth || artifact.width;
+      const height = artifact.actualHeight || artifact.height;
       const worldTransform = {
-        x: artifact.x - (artifact.width / 2),
-        y: artifact.y - (artifact.height / 2),
+        x: artifact.x - (width / 2),
+        y: artifact.y - (height / 2),
         rotation: artifact.rotation || 0,
         scale: 1
       };
@@ -174,7 +226,8 @@ class ArtifactGallery {
   }
 
   setupInteractions() {
-    this.artifacts.forEach(artifact => {
+    // Only set up interactions for visible artifacts
+    this.artifacts.filter(a => !a.hidden).forEach(artifact => {
       if (!artifact.element) return;
 
       let wasDragging = false;
@@ -184,8 +237,9 @@ class ArtifactGallery {
       const DRAG_THRESHOLD = 5; // Pixels of movement before considering it a drag (prevents suppressing taps)
       const CLICK_AFTER_DRAG_DELAY = 50; // Milliseconds - ignore clicks this soon after drag ends
 
-      // Use Interact.js for dragging
-      interact(artifact.element)
+      // Use Interact.js for dragging - use the image itself (or box for colored boxes)
+      const draggableElement = artifact.element.draggableElement || artifact.element.querySelector('.artifact-box') || artifact.element;
+      interact(draggableElement)
         .draggable({
           listeners: {
             start: (event) => {
@@ -253,7 +307,8 @@ class ArtifactGallery {
         });
 
       // Click handler for focus mode (only if not currently dragging)
-      artifact.element.addEventListener('click', (e) => {
+      const clickableElement = artifact.element.draggableElement || artifact.element;
+      clickableElement.addEventListener('click', (e) => {
         // Don't focus if click happens too soon after drag ends (prevents accidental focus on drag end)
         const timeSinceDragEnd = Date.now() - dragEndTime;
         if (wasDragging || (dragEndTime > 0 && timeSinceDragEnd < CLICK_AFTER_DRAG_DELAY)) {
@@ -333,18 +388,33 @@ class ArtifactGallery {
     
     // Calculate column width based on artifact's focusWidth percentage
     const rect = this.canvasContainer.getBoundingClientRect();
-    const columnWidth = rect.width * (focusWidthPercent / 100);
+    let columnWidth = rect.width * (focusWidthPercent / 100);
+    
+    // Apply max-width of 500px on desktop (screens wider than 768px)
+    if (rect.width > 768) {
+      columnWidth = Math.min(columnWidth, 500);
+    }
     
     // Clone the artifact element for focus view
     const artifactClone = artifact.element.cloneNode(true);
     artifactClone.classList.add('focus-artifact');
     
     // Calculate scale to fill column width (maintain aspect ratio)
-    const scale = columnWidth / artifact.width;
-    const scaledHeight = artifact.height * scale;
+    // Use actual dimensions if available (from image), otherwise fall back to artifact dimensions
+    const actualWidth = artifact.actualWidth || artifact.width;
+    const actualHeight = artifact.actualHeight || artifact.height;
+    let scale = columnWidth / actualWidth;
     
-    // Set explicit dimensions to fill column
-    artifactClone.style.width = columnWidth + 'px';
+    // Apply focus scale multiplier if specified (e.g., 0.5 for half size)
+    if (artifact.focusScale) {
+      scale = scale * artifact.focusScale;
+    }
+    
+    const scaledHeight = actualHeight * scale;
+    
+    // Set explicit dimensions - use scaled width if focusScale is applied
+    const scaledWidth = columnWidth * (artifact.focusScale || 1);
+    artifactClone.style.width = scaledWidth + 'px';
     artifactClone.style.height = scaledHeight + 'px';
     artifactClone.style.maxWidth = '100%';
     artifactClone.style.transform = `rotate(0deg)`; // Straighten it
@@ -354,6 +424,13 @@ class ArtifactGallery {
     if (box) {
       box.style.width = '100%';
       box.style.height = '100%';
+      box.style.cursor = 'pointer'; // Ensure pointer cursor
+      // Ensure image maintains aspect ratio
+      const img = box.querySelector('img');
+      if (img) {
+        img.style.objectFit = 'contain'; // Maintain aspect ratio, don't stretch
+        img.style.cursor = 'pointer'; // Ensure pointer cursor, not move cursor
+      }
     }
     
     // Set container padding based on calculated gutters
