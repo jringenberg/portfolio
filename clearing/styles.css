@@ -92,8 +92,7 @@ body {
   z-index: 2001;
   display: none;
   overflow-y: auto;
-  overflow-x: hidden; /* Prevent horizontal scroll but allow vertical */
-  /* Padding added in .active to prevent shadow clipping */
+  overflow-x: visible; /* Allow shadows to extend beyond container */
   pointer-events: auto;
   cursor: pointer; /* Pointing hand cursor */
 }

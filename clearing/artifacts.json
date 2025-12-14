@@ -44,7 +44,7 @@
     {
       "id": "market-receipt",
       "label": "Receipt Detail",
-      "blurb": "The receipt is the most screen-shotted and most shared element of prediction markets. Here, the background gradient is derived from the position and originating client, in this case “Yes, Eagles” (teal) and Coinbase (blue).",
+      "blurb": "The receipt is the most screen-shotted and shared element of prediction markets. Here, the background gradient is derived from the position and originating client, in this case “Yes, Eagles” (teal) and Coinbase (blue).",
       "x": 218,
       "y": 43,
       "rotation": 12,
@@ -73,7 +73,7 @@
       "id": "battleship",
       "label": "Battleship Grid",
       "blurb": "When prediction market mechanics are onchain, open building blocks, novel use cases are unlocked. In this imagined case, one side of a game of Battleship is played by the crowd, betting on the likelihood of a hit in any square on the grid. Hit/miss is revealed periodically on the square with the highest volume.",
-      "x": -235,
+      "x": -185,
       "y": -55,
       "rotation": -8,
       "z": 0,
