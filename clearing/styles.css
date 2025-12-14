@@ -93,6 +93,7 @@ body {
   display: none;
   overflow-y: auto;
   overflow-x: hidden; /* Prevent horizontal scroll but allow vertical */
+  /* Padding added in .active to prevent shadow clipping */
   pointer-events: auto;
   cursor: pointer; /* Pointing hand cursor */
 }
@@ -107,6 +108,10 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 10vh 0 10vh 0; /* Horizontal padding set dynamically via JS */
+  /* Add horizontal padding to prevent shadow clipping */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .focus-label {
@@ -130,7 +135,11 @@ body {
   }
   
   #focus-container.active {
-    padding: 5vh 0 5vh 0; /* Less padding on mobile */
+    padding: 5vh 20px 5vh 20px; /* Less vertical padding, horizontal padding for shadows */
+  }
+  
+  .focus-artifact {
+    padding: 16px; /* More padding on mobile for better shadow clearance */
   }
   
   /* Prevent text selection issues on mobile */
