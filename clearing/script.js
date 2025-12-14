@@ -238,15 +238,16 @@ class ArtifactGallery {
             },
             end: (event) => {
               artifact.element.classList.remove('dragging');
+              // Reset wasDragging after drag ends, so next click will work
+              wasDragging = false;
             }
           }
         });
 
-      // Click handler for focus mode (only if not dragging)
+      // Click handler for focus mode (only if not currently dragging)
       artifact.element.addEventListener('click', (e) => {
-        // Don't focus if we just dragged
+        // Don't focus if we're currently in a drag operation
         if (wasDragging) {
-          wasDragging = false;
           return;
         }
         
