@@ -44,7 +44,7 @@
     {
       "id": "market-receipt",
       "label": "Receipt Detail",
-      "blurb": "The receipt is the most screen-shotted and shared element of prediction markets. Here, the background gradient is derived from the position and originating client, in this case “Yes, Eagles” (teal) and Coinbase (blue).",
+      "blurb": "The receipt is the most screen-shotted and shared element of prediction markets. Here, the background gradient is derived from the position and originating client, in this case Eagles (teal) and Coinbase (blue).",
       "x": 218,
       "y": 43,
       "rotation": 12,
