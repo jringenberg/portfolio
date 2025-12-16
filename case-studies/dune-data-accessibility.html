@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dune Data Accessibility - Joe Ringenberg</title>
+    <meta name="description" content="By Joe Ringenberg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕️</text></svg>">
+    <link rel="stylesheet" href="../cv.css">
+</head>
+<body>
+    <div class="page">
+        <div class="back-link-container">
+            <a href="/cv" class="back-link">← Back to CV</a>
+        </div>
+        
+        <div class="case-study">
+            <h1>Dune Data Accessibility</h1>
+            <p>When you query data on Dune, the hardest part usually isn't writing SQL — it's finding the right data. Analysts choose from a catalog of more than 1.6M tables: raw blockchain data, uploads, decoded contracts, old versions of decoded contracts. Search for a major protocol like Uniswap and you'll see hundreds of results, often duplicated across chains. If a contract is deployed on Ethereum, Arbitrum, Optimism, and Base, you have to know that — and then stitch it together yourself.</p>
+
+            <p>The data team addressed this by creating multichain contract objects that link and consolidate deployments of the same contract across networks. Instead of querying each chain separately, analysts can reference a single object and know it represents the whole system.</p>
+
+            <img src="/content/writing/dune-data-accessibility-1.png" alt="Search results showing multiple contract deployments across chains">
+
+            <p>One key choice in the design of the contract page is the structure of the page itself. Rather than leading with raw onchain data, the page starts with actions and community content. When experienced analysts (or someone who simply wants to understand the contract) land here, they can see how others have already worked with it — existing queries to learn from, dashboards that illuminate what the data is useful for, or something they can fork and adapt quickly.</p>
+
+            <img src="/content/writing/dune-data-accessibility-2.png" alt="Contract page showing community content and queries first">
+
+            <p>Functions and events still matter, and they're the foundation of the page. But they're framed as reference material, not the entry point. The goal was to help users understand what the contract is for, how people are using it, and where to go next.</p>
+
+            <p>One design puzzle was representing ABI differences across deployments. Some may be identical, some not, and it's important to be able to see at a glance which match and which differ. My solution was to show a short hash of each ABI so that any matching is legible at a glance.</p>
+
+            <img src="/content/writing/dune-data-accessibility-4.png" alt="Contract page showing community content and queries first">
+
+            <p>Did it work? As the new data object and new pages set a new baseline, and the most meaningful signal came from analysts themselves (like the head of data at Uniswap!) who said this made their work easier.</p>
+
+            <a href="https://x.com/_grace_lily/status/1912627090580463646" target="_blank" rel="noopener noreferrer">
+                <img src="/content/writing/dune-data-accessibility-3.png" alt="Analyst feedback and results">
+            </a>
+
+            <p>Dune’s mission is “making onchain data accessible.” This project does exactly that, making the raw data more legible, faster to put to work, and making the hard work analysts do a little bit easier.</p>
+        </div>
+    </div>
+</body>
+</html>
+
