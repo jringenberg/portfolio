@@ -185,9 +185,20 @@ a {
 /* Case Study Page Styles */
 .case-study {
     width: 100%;
-    max-width: 480px;
+    max-width: 768px;
     margin: 0 auto;
     padding-bottom: 100px;
+}
+
+.case-study > h1,
+.case-study > h2,
+.case-study > h3,
+.case-study > p,
+.case-study > ul,
+.case-study > ol {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .back-link-container {
@@ -207,28 +218,32 @@ a {
 }
 
 .case-study h1 {
-    margin: 0 0 1rem 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
     font-size: 20px;
     font-weight: 350;
     line-height: 1.2;
 }
 
 .case-study h2 {
-    margin: 2rem 0 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: var(--font-size);
     font-weight: normal;
     color: var(--grey1);
 }
 
 .case-study h3 {
-    margin: 2rem 0 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-size: var(--font-size);
     font-weight: normal;
     color: var(--grey1);
 }
 
 .case-study p {
-    margin: 0 0 1rem 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
     line-height: var(--line-height);
     color: var(--grey2);
 }
@@ -239,9 +254,38 @@ a {
 
 .case-study img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 1.5rem 0;
     border-radius: 8px;
+}
+
+.case-study > a {
+    display: block;
+    width: 100%;
+}
+
+.img-fade-bottom {
+    position: relative;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.img-fade-bottom img {
+    margin: 0;
+    border-radius: 0;
+}
+
+.img-fade-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
 }
 
 .case-study ul {
@@ -320,5 +364,14 @@ a {
     .case-study {
         margin-left: 16px;
         margin-right: 16px;
+    }
+
+    .case-study > h1,
+    .case-study > h2,
+    .case-study > h3,
+    .case-study > p,
+    .case-study > ul,
+    .case-study > ol {
+        max-width: 100%;
     }
 } 
